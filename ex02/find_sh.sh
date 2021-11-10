@@ -1,6 +1,1 @@
-#/bin/sh
-
-for file in $(find . -name "*.sh")
-do
-	echo ${file##*/} | sed "s/.sh//g"
-done
+find . -type f -name "*.sh" | sed -e 's/^.*\///' -e 's/\.sh$//'
